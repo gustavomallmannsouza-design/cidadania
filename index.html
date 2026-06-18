@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital e IA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Cidadania Digital e IA</h1>
+        <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
+        <button id="btn-theme">Alternar Modo Escuro</button>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre o Tema</a>
+        <a href="#identificar">Como Identificar</a>
+        <a href="#quiz">Teste seus Conhecimentos</a>
+    </nav>
+
+    <main>
+        <section id="sobre">
+            <h2>O que são Deepfakes e Fake News Automatizadas?</h2>
+            <p>As <strong>deepfakes</strong> são mídias (vídeos, áudios ou imagens) manipuladas por Inteligência Artificial de forma ultra-realista. Quando aliadas a robôs automatizados, essas tecnologias conseguem espalhar desinformação em massa na velocidade de um clique, ameaçando a segurança digital e a democracia.</p>
+        </section>
+
+        <section id="identificar">
+            <h2>Boas Práticas de Segurança e Identificação</h2>
+            <p>Para não ser enganado por conteúdos falsificados por IA, adote os seguintes hábitos de cidadania digital:</p>
+            <ul>
+                <li><strong>Preste atenção aos detalhes:</strong> Deepfakes em vídeo costumam apresentar piscadas de olhos não naturais, falhas na iluminação e borrões ao redor do rosto.</li>
+                <li><strong>Desconfie de áudios alarmantes:</strong> Clones de voz podem ser criados com poucos segundos de gravação. Sempre confirme a identidade da pessoa por outro meio.</li>
+                <li><strong>Verifique em fontes oficiais:</strong> Antes de compartilhar uma notícia bombástica, busque por ela em portais de jornalismo confiáveis ou agências de checagem.</li>
+            </ul>
+        </section>
+
+        <section id="quiz">
+            <h2>Quiz da Verdade Digital</h2>
+            <p>Responda às perguntas abaixo e descubra se você consegue navegar com segurança!</p>
+            
+            <form id="form-quiz">
+                <div class="question">
+                    <p>1. Se um vídeo parece mostrar uma celebridade falando algo absurdo e os olhos dela quase não piscam, o que você deve fazer?</p>
+                    <label>
+                        <input type="radio" name="q1" value="correto" required> Desconfiar, pesquisar em fontes confiáveis e não compartilhar.
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="errado"> Compartilhar imediatamente nos grupos de mensagem para alertar a todos.
+                    </label>
+                </div>
+
+                <div class="question">
+                    <p>2. O uso de IA para clonar vozes de parentes pedindo dinheiro urgente é um exemplo real de perigo digital?</p>
+                    <label>
+                        <input type="radio" name="q2" value="correto" required> Sim, é um golpe comum e devemos ligar de volta para o número original para confirmar.
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="errado"> Não, as IAs atuais ainda não conseguem imitar vozes humanas com perfeição.
+                    </label>
+                </div>
+
+                <button type="submit">Enviar Respostas</button>
+            </form>
+            <div id="resultado-quiz"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto de Educação Digital e IA. Desenvolvido para a Recuperação Prática.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

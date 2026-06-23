@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade de Bolso - 3 Modos de Jogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎮 Arena Arcade Interativa</h1>
+        <p>Selecione uma aba, jogue contra um amigo ou desafie nossa Inteligência Artificial!</p>
+    </header>
+
+    <!-- MENU DE ABAS -->
+    <nav class="tabs">
+        <button class="tab-btn active" onclick="switchGame('jogo-velha-ia')">🤖 Velha VS IA</button>
+        <button class="tab-btn" onclick="switchGame('jogo-memoria')">🧠 Memória</button>
+        <button class="tab-btn" onclick="switchGame('jogo-adivinha')">🔮 Adivinhação</button>
+    </nav>
+
+    <main class="container">
+        
+        <!-- JOGO 1: VELHA CONTRA A INTELIGÊNCIA ARTIFICIAL -->
+        <section id="jogo-velha-ia" class="game-wrapper active">
+            <div class="game-area">
+                <div class="status" id="ia-status">Sua vez! Você é o X</div>
+                <div class="board" id="ia-board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+                <button class="btn-reset" onclick="resetVelhaIA()">Reiniciar Desafio</button>
+            </div>
+            <aside class="info-area">
+                <h2>⚡ Como Vencer o Computador?</h2>
+                <div class="tip-card">
+                    <h4>A Armadilha do Canto</h4>
+                    <p>Comece jogando em qualquer um dos 4 cantos. Se o bot não responder ocupando o centro exato imediatamente, jogue no canto oposto. Você criará dois caminhos de vitória simultâneos.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Bloqueio Forçado</h4>
+                    <p>O robô é programado para olhar suas sequências. Use isso a seu favor criando ameaças falsas para guiar as jogadas dele para onde você quer.</p>
+                </div>
+            </aside>
+        </section>
+
+        <!-- JOGO 2: JOGO DA MEMÓRIA REAL -->
+        <section id="jogo-memoria" class="game-wrapper">
+            <div class="game-area">
+                <div class="status" id="memoria-status">Clique nas cartas para achar os pares!</div>
+                <div class="memory-grid" id="memory-grid">
+                    <!-- Cartas inseridas via JS -->
+                </div>
+                <button class="btn-reset" onclick="resetMemoria()">Embaralhar e Reiniciar</button>
+            </div>
+            <aside class="info-area">
+                <h2>⚡ Estratégia de Memorização</h2>
+                <div class="tip-card">
+                    <h4>Âncora de Cantos</h4>
+                    <p>Comece virando apenas as cartas das extremidades (as pontas da tabela). Fica muito mais fácil lembrar a posição dos objetos usando as bordas como referência espacial.</p>
+                </div>
+            </aside>
+        </section>
+
+        <!-- JOGO 3: JOGO DE ADIVINHAÇÃO REGRESSIVA -->
+        <section id="jogo-adivinha" class="game-wrapper">
+            <div class="game-area">
+                <div class="status">Descubra o número secreto (1 a 100)</div>
+                <div class="guess-box">
+                    <input type="number" id="guess-input" min="1" max="100" placeholder="0">
+                    <button class="btn-guess" onclick="checkGuess()">Enviar</button>
+                </div>
+                <div class="status" id="adivinha-feedback">Aguardando palpite...</div>
+                <button class="btn-reset" onclick="resetAdivinha()">Trocar Número Secreto</button>
+            </div>
+            <aside class="info-area">
+                <h2>⚡ Estratégia Matemática</h2>
+                <div class="tip-card">
+                    <h4>Divisão Binária Absoluta</h4>
+                    <p>Chute 50. Se for menor, chute 25. Se for maior, chute 75. Sempre divida a margem restante ao meio. Seguindo essa regra matemática, é impossível perder o jogo.</p>
+                </div>
+            </aside>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
